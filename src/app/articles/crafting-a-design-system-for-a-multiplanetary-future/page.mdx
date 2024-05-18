@@ -1,0 +1,81 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './planetaria-design-system.jpg'
+
+export const article = {
+  author: 'Qasem Nik',
+  date: '2024-02-25',
+  title: 'Taming the Code Beasts: Mastering Function in JavaScript',
+  description:
+    `Hey JavaScript enthusiasts! Today I'm diving into the world of functions, those versatile code beasts that make our lives (and code) much easier.But before we unleash their full potential, let's understand the different types we can work with:`,
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+Hey JavaScript enthusiasts! Today I'm diving into the world of functions, those versatile code beasts that make our lives (and code) much easier.
+
+But before we unleash their full potential, let's understand the different types we can work with:
+
+<Image src={designSystem} alt="" />
+
+**The Function Declaration (The OG):**
+Imagine this: you have a recipe for your grandma's famous cookies. You write down the steps in a clear, concise way, and anyone can follow them to bake delicious treats. That's essentially a function declaration!
+
+```js
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+greet("Alice"); // Output: Hello, Alice!
+```
+
+Explanation:
+`function greet(name):` This line declares the function named greet, taking one parameter named name.
+`console.log("Hello, " + name + "!");`: This line defines the function's behavior, printing a greeting message with the provided name.
+`greet("Alice");`: This line calls the function, passing the argument `"Alice"` to the name parameter.
+
+**The Function Expression (The Ninja):**
+This type is like a secret agent, able to be assigned to variables and passed like any other value.
+
+```js
+const greet = function(name) {
+  console.log("Hey there, " + name + ".");
+};
+
+greet("Bob"); // Output: Hey there, Bob.
+```
+
+Explanation:
+`const greet = function(name) {...}`: Here, we define a function and assign it to the greet constant using a function expression.
+The rest remains similar to the declaration.
+
+**The Arrow Function (The Concise One):**
+This sleek type is perfect for short, simple functions. Think of it as a one-liner in the coding world.
+
+```js
+const greet = (name) => console.log("Greetings, " + name + "!");
+
+greet("Charlie"); // Output: Greetings, Charlie!
+```
+Explanation:
+
+`const greet = (name) => {...}`: This combines the function definition and assignment in one line using the arrow operator `(=>)`.
+
+**Why use Functions?**
+
+1. Reusability: Code once, use it everywhere! Functions allow you to create reusable blocks of code, saving time and effort.
+2. Modularity: Break down complex tasks into smaller, manageable functions, making your code cleaner and easier to understand.
+3. Maintainability: When changes are needed, you only modify the relevant function, reducing the risk of unintended consequences elsewhere.
+
+**When to use Functions:**
+
+Whenever you find yourself repeating a block of code, it's a sign to create a function!
+For complex tasks, break them down into smaller, more manageable functions.
+When you need to pass data or perform calculations based on different inputs.
+
+> So, there you have it! These are the three main types of functions in JavaScript, along with their basic explanations and benefits. Remember, practice makes perfect, so experiment and create your own functions to conquer those coding challenges!
